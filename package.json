@@ -1,23 +1,32 @@
 {
-  "name": "asciitable",
-  "version": "0.0.7",
-  "description": "Render tables in text for tabular terminal fun times!",
-  "main": "index.js",
+  "name": "chalk-table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
   "scripts": {
-    "test": "mocha -R spec"
+    "test": "node ./example/example.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/deoxxa/asciitable.git"
+    "url": "git+https://github.com/bukharim96/chalk-table.git"
   },
+  "author": "BM <bukharim96@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bukharim96/chalk-table/issues"
+  },
+  "homepage": "https://github.com/bukharim96/chalk-table#readme",
   "keywords": [
     "ascii",
     "table",
-    "render",
     "console",
     "terminal",
-    "text"
+    "chalk"
   ],
-  "author": "Conrad Pankoff <deoxxa@fknsrs.biz> (http://www.fknsrs.biz/)",
-  "license": "BSD"
+  "devDependencies": {
+    "chalk": "^2.4.2"
+  },
+  "dependencies": {
+    "strip-ansi": "^5.2.0"
+  }
 }
