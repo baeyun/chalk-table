@@ -1,8 +1,8 @@
-# Chalk Table
+<h1 align="center">Chalk Table</h1>
 
-`chalk-table` is a small terminal table tool that comes with chalk support out of the box.
+<p align="center">A mini terminal table tool with chalk support out of the box.</p>
 
-It is a project I forked from [@deoxxa](http://github.com/deoxxa)'s cool `asciitable` package. I've added support for chalk and a few extra fixes. In case you're wondering, it can still render simple tables with headings and pretty hyphen/pipe character-based formatting.
+`chalk-table` is a project I forked from [@deoxxa](http://github.com/deoxxa)'s cool `asciitable` package. I've added support for chalk and a few extra fixes. In case you're wondering, it can still render simple tables with headings and pretty hyphen/pipe character-based formatting.
 
 ## Install
 
@@ -16,7 +16,9 @@ If you use yarn, you know how it goes. :D
 
 We'll render the following ascii table:
 
-<img height="170px" src="https://raw.githubusercontent.com/bukharim96/chalk-table/master/resources/screenshot.png">
+<p align="center">
+  <img src="https://raw.githubusercontent.com/bukharim96/chalk-table/master/resources/screenshot.png">
+</p>
 
 The above example table has been built with the following code:
 
