@@ -1,25 +1,24 @@
 #!/usr/bin/env node
 
 const chalk = require("chalk");
-const chalktable = require("../src");
+const chalkTable = require("../src");
 
 const options = {
-  skinny: true,
+  leftPad: 2,
   columns: [
-    { field: "ab", name: chalk.cyan("First") },
-    { field: "b", name: chalk.yellow("Second") },
-    { field: "c", name: "Third" },
-    { field: "de", name: chalk.magenta("Fourth") }
+    { field: "id",     name: chalk.cyan("ID") },
+    { field: "fruit",  name: chalk.magenta("Fruit") },
+    { field: "veggie", name: chalk.green("Vegetable") },
+    { field: "other",  name: chalk.yellow("Other") }
   ]
 };
 
-const table = chalktable(options, [
-  { ab: "a", b: "b", c: "c" },
-  { ab: "asddsfa", b: "sss", c: "zxc" },
-  { ab: chalk.red("dsgvdgsdvgssdf"), b: "x", c: chalk.green("eryty") },
-  { ab: "m", b: "n", c: "o", de: chalk.blue("p") },
-  { ab: 5, b: null, c: {}, de: [] },
-  { ab: function() {} }
+const table = chalkTable(options, [
+  { id: 0, fruit: "🍇 Grapes",     veggie: "🌽 Maize",    other: "🍕 Pizza" },
+  { id: 1, fruit: "🍈 Melon",      veggie: "🍅 Tomato",   other: "🍔 Hamburger" },
+  { id: 2, fruit: "🍉 Watermelon", veggie: "🥑 Avocado",  other: "🌭 Hot Dog" },
+  { id: 3, fruit: "🍊 Tangerine",  veggie: "🥦 Broccoli", other: "🥪 Sandwich" },
+  { id: 4, fruit: "🍍 Pineapple",  veggie: "🥒 Cucumber", other: "🌮 Taco" }
 ]);
 
 console.log(table);

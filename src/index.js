@@ -1,3 +1,4 @@
+const chalk = require("chalk");
 const stripAnsi = require("strip-ansi");
 
 module.exports = (options, data) => {
@@ -51,6 +52,7 @@ module.exports = (options, data) => {
       };
     }
 
+    e.name = chalk.bold(e.name);
     e.width = stripAnsi(e.name).length;
 
     return e;
@@ -94,9 +96,10 @@ module.exports = (options, data) => {
   });
   output.push(separator);
 
-  if (options.skinny) {
-    output = output.map(e => e.replace(/^[ -]/, "").replace(/[ -]$/, ""));
-  }
+  const leftPad = " ".repeat(options.leftPad) || "";
 
-  return output.join("\n");
+  return (
+    leftPad +
+    output.map(e => e.replace(/^[ -]/, "").replace(/[ -]$/, "")).join("\n" + leftPad)
+  );
 };
